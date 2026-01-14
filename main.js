@@ -2,6 +2,24 @@
 document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generate-button');
     const numbersDisplay = document.getElementById('numbers-display');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+
+    // Theme switching
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        // Save theme preference
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            localStorage.removeItem('theme');
+        }
+    });
+
+    // Check for saved theme preference
+    if (localStorage.getItem('theme') === 'dark-mode') {
+        body.classList.add('dark-mode');
+    }
 
     function generateLottoNumbers() {
         // Clear previous numbers
