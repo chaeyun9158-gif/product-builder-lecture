@@ -1,1 +1,97 @@
-/* Add styles here */
+
+:root {
+    --primary-color: #4a90e2;
+    --background-color: #f4f7f6;
+    --font-color: #333;
+    --ball-size: 60px;
+    --border-radius: 12px;
+    --shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--font-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.lotto-container {
+    background-color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    padding: 30px;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+header h1 {
+    color: var(--primary-color);
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.numbers-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    min-height: calc(var(--ball-size) + 10px); /* Reserve space for balls */
+}
+
+.lotto-ball {
+    width: var(--ball-size);
+    height: var(--ball-size);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    box-shadow: inset -3px -3px 8px rgba(0,0,0,0.3);
+    animation: reveal 0.5s ease-out forwards;
+    transform: scale(0);
+}
+
+#generate-button {
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    padding: 12px 25px;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#generate-button:hover {
+    background-color: #357abd;
+}
+
+#generate-button:active {
+    transform: scale(0.98);
+}
+
+@keyframes reveal {
+    from {
+        transform: scale(0);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Color classes for balls */
+.color-1 { background-color: #fbc400; } /* Yellow */
+.color-2 { background-color: #69c8f2; } /* Blue */
+.color-3 { background-color: #ff7272; } /* Red */
+.color-4 { background-color: #aaa;    } /* Gray */
+.color-5 { background-color: #b0d840; } /* Green */
