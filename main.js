@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', () => {
     const generateButton = document.getElementById('generate-button');
     const numbersDisplay = document.getElementById('numbers-display');
