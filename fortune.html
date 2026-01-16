@@ -5,27 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fortune Teller</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="fortune.css">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Fortune Teller</h1>
+            <h1 data-i18n="fortuneTitle" style="display:none;">Fortune Teller</h1>
             <nav>
-                <a href="index.html">Lotto</a>
-                <a href="fortune.html">Fortune</a>
-                <a href="physiognomy.html">Physiognomy</a>
+                <a href="index.html" data-i18n="lotto">Lotto</a>
+                <a href="fortune.html" data-i18n="fortune">Fortune</a>
+                <a href="physiognomy.html" data-i18n="physiognomy">Physiognomy</a>
             </nav>
+            <div class="language-switcher">
+                <select id="language-switcher">
+                    <option value="en">English</option>
+                    <option value="ko">한국어</option>
+                </select>
+            </div>
+            <button id="theme-toggle" data-i18n="themeToggle">Toggle Theme</button>
         </header>
         <main>
-            <h2>Enter your name to see your fortune!</h2>
+            <h2 data-i18n="fortuneTitle">Today's Fortune</h2>
             <div class="fortune-container">
-                <input type="text" id="name-input" placeholder="Enter your name">
-                <button id="fortune-button">Get Fortune</button>
-                <div id="fortune-display"></div>
+                <div class="fortune-cookie-container">
+                    <img src="https://www.transparentpng.com/thumb/fortune-cookie/aF6Rxh-fortune-cookie-love-hearts-hd-images.png" alt="Fortune Cookie" class="fortune-cookie">
+                    <div id="fortune-text" class="fortune-text"></div>
+                </div>
+                <button id="crack-cookie-button" data-i18n="fortuneCookie">Fortune Cookie</button>
             </div>
         </main>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/i18next@21.6.10/i18next.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/i18next-http-backend@1.4.0/i18nextHttpBackend.min.js"></script>
     <script src="fortune.js"></script>
 </body>
 </html>

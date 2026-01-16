@@ -1,30 +1,68 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const nameInput = document.getElementById('name-input');
-    const fortuneButton = document.getElementById('fortune-button');
-    const fortuneDisplay = document.getElementById('fortune-display');
+    const fortuneText = document.getElementById('fortune-text');
+    const crackCookieButton = document.getElementById('crack-cookie-button');
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    const languageSwitcher = document.getElementById('language-switcher');
+
+    // i18next initialization
+    i18next
+        .use(i18nextHttpBackend)
+        .init({
+            lng: localStorage.getItem('language') || 'en',
+            fallbackLng: 'en',
+            backend: {
+                loadPath: 'locales/{{lng}}/translation.json'
+            }
+        }, (err, t) => {
+            if (err) return console.error(err);
+            updateContent();
+            document.title = i18next.t('fortuneTitle');
+        });
+
+    function updateContent() {
+        document.querySelectorAll('[data-i18n]').forEach(element => {
+            const key = element.getAttribute('data-i18n');
+            element.textContent = i18next.t(key);
+        });
+    }
+
+    languageSwitcher.addEventListener('change', (e) => {
+        const lang = e.target.value;
+        localStorage.setItem('language', lang);
+        i18next.changeLanguage(lang, (err, t) => {
+            if (err) return console.error(err);
+            updateContent();
+            document.title = i18next.t('fortuneTitle');
+        });
+    });
+
+    // Theme switching
+    themeToggle.addEventListener('click', () => {
+        body.classList.toggle('dark-mode');
+        // Save theme preference
+        if (body.classList.contains('dark-mode')) {
+            localStorage.setItem('theme', 'dark-mode');
+        } else {
+            localStorage.removeItem('theme');
+        }
+    });
+
+    // Check for saved theme preference
+    if (localStorage.getItem('theme') === 'dark-mode') {
+        body.classList.add('dark-mode');
+    }
 
     const fortunes = [
-        "You will have a great day!",
-        "Good news is coming your way.",
-        "You will meet someone special soon.",
-        "A surprising opportunity will arise.",
-        "Your hard work will pay off.",
-        "You will find a solution to a problem.",
-        "A dream you have will come true.",
-        "You will receive a gift.",
-        "You will travel to a new place.",
-        "You will learn something new and exciting."
+        "A beautiful, smart, and loving person will be coming into your life.",
+        "A dubious friend may be an enemy in camouflage.",
+        "A faithful friend is a strong defense.",
+        "A feather in the hand is better than a bird in the air.",
+        "A fresh start will put you on your way."
     ];
 
-    fortuneButton.addEventListener('click', () => {
-        const name = nameInput.value.trim();
-        if (name === "") {
-            fortuneDisplay.textContent = "Please enter your name.";
-            return;
-        }
-
+    crackCookieButton.addEventListener('click', () => {
         const randomIndex = Math.floor(Math.random() * fortunes.length);
-        const randomFortune = fortunes[randomIndex];
-        fortuneDisplay.textContent = `${name}, your fortune is: ${randomFortune}`;
+        fortuneText.textContent = fortunes[randomIndex];
     });
 });
