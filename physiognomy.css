@@ -1,0 +1,37 @@
+/* Basic styling for the physiognomy test page */
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+
+.physiognomy-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 1rem;
+}
+
+#feature-select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#get-reading-button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#reading-display {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}

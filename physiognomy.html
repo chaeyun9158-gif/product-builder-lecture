@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physiognomy Test</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="physiognomy.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Physiognomy Test</h1>
+            <nav>
+                <a href="index.html">Lotto</a>
+                <a href="fortune.html">Fortune</a>
+                <a href="physiognomy.html">Physiognomy</a>
+            </nav>
+        </header>
+        <main>
+            <h2>Discover your physiognomy!</h2>
+            <div class="physiognomy-container">
+                <label for="feature-select">Select a feature:</label>
+                <select id="feature-select">
+                    <option value="">--Please choose an option--</option>
+                    <option value="eyes">Eyes</option>
+                    <option value="nose">Nose</option>
+                    <option value="mouth">Mouth</option>
+                    <option value="ears">Ears</option>
+                </select>
+                <button id="get-reading-button">Get Reading</button>
+                <div id="reading-display"></div>
+            </div>
+        </main>
+    </div>
+    <script src="physiognomy.js"></script>
+</body>
+</html>
