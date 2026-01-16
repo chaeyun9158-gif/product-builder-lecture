@@ -8,5 +8,14 @@
   "fortuneTitle": "오늘의 운세",
   "fortuneCookie": "포춘 쿠키",
   "physiognomyTitle": "오늘의 관상",
-  "camera": "카메라"
+  "camera": "카메라",
+  "about": "소개",
+  "privacy": "개인정보처리방침",
+  "aboutTitle": "사이트 소개",
+  "aboutText": "이 사이트는 로또 번호 생성기, 오늘의 운세, 관상 보기와 같은 재미있고 흥미로운 서비스를 제공합니다. 즐거운 시간을 보내시기 바랍니다!",
+  "privacyTitle": "개인정보처리방침",
+  "privacyText": "이 사이트는 Google AdSense를 사용하며, Google AdSense는 쿠키를 사용하여 사용자의 이전 웹사이트 방문 기록을 기반으로 광고를 제공합니다. Google의 광고 쿠키 사용을 통해 Google과 파트너는 사용자의 사이트 및/또는 인터넷의 다른 사이트 방문 기록을 기반으로 사용자에게 광고를 제공할 수 있습니다. 사용자는 광고 설정에서 맞춤 광고를 선택 해제할 수 있습니다.",
+  "lottoDescription": "버튼을 누르면 1부터 45까지의 숫자 중 6개의 무작위 로또 번호가 생성됩니다. 각 번호는 고유하며 생성된 번호는 편의를 위해 정렬됩니다.",
+  "fortuneDescription": "포춘 쿠키를 클릭하여 오늘의 운세를 확인하세요.",
+  "physiognomyDescription": "카메라를 사용하여 사진을 찍고 관상 결과를 확인하세요."
 }

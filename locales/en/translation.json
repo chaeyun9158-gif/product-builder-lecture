@@ -8,5 +8,14 @@
   "fortuneTitle": "Today's Fortune",
   "fortuneCookie": "Fortune Cookie",
   "physiognomyTitle": "Today's Physiognomy",
-  "camera": "Camera"
+  "camera": "Camera",
+  "about": "About",
+  "privacy": "Privacy",
+  "aboutTitle": "About Us",
+  "aboutText": "This site provides fun and interesting services like a lotto number generator, daily fortunes, and physiognomy readings. We hope you enjoy your time here!",
+  "privacyTitle": "Privacy Policy",
+  "privacyText": "This site uses Google AdSense, which uses cookies to serve ads based on a user's prior visits to this website or other websites. Google's use of advertising cookies enables it and its partners to serve ads to your users based on their visit to your sites and/or other sites on the Internet. Users may opt out of personalized advertising by visiting Ads Settings.",
+  "lottoDescription": "Press the button to generate 6 random lotto numbers between 1 and 45. Each number is unique and the generated numbers are sorted for your convenience.",
+  "fortuneDescription": "Click the fortune cookie to reveal your fortune for today.",
+  "physiognomyDescription": "Use your camera to take a picture and see your physiognomy reading."
 }
